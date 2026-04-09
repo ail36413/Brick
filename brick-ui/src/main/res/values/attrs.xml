@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StateLayout">
+        <attr name="loadingLayout" format="reference" />
+        <attr name="emptyLayout" format="reference" />
+        <attr name="errorLayout" format="reference" />
+        <!-- 是否启用状态切换动画，默认 true -->
+        <attr name="enableAnimation" format="boolean" />
+        <!-- 动画时长（毫秒），默认 200 -->
+        <attr name="animationDuration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleBar">
+        <attr name="titleBar_title" format="string" />
+        <attr name="titleBar_leftIcon" format="reference" />
+        <attr name="titleBar_rightText" format="string" />
+        <!-- 右侧图标资源 -->
+        <attr name="titleBar_rightIcon" format="reference" />
+        <attr name="titleBar_showBack" format="boolean" />
+        <attr name="titleBar_titleColor" format="color" />
+        <attr name="titleBar_bgColor" format="color" />
+        <!-- 是否适配沉浸式状态栏，默认 false -->
+        <attr name="titleBar_immersive" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="BadgeView">
+        <attr name="badge_count" format="integer" />
+        <attr name="badge_bgColor" format="color" />
+        <attr name="badge_textColor" format="color" />
+        <attr name="badge_textSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundLayout">
+        <attr name="round_radius" format="dimension" />
+        <attr name="round_topLeftRadius" format="dimension" />
+        <attr name="round_topRightRadius" format="dimension" />
+        <attr name="round_bottomLeftRadius" format="dimension" />
+        <attr name="round_bottomRightRadius" format="dimension" />
+        <!-- 描边颜色，默认透明（不绘制） -->
+        <attr name="round_strokeColor" format="color" />
+        <!-- 描边宽度，默认 0（不绘制） -->
+        <attr name="round_strokeWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="FlowLayout">
+        <!-- 子 View 水平间距，默认 8dp -->
+        <attr name="flow_horizontalSpacing" format="dimension" />
+        <!-- 子 View 垂直间距（行间距），默认 8dp -->
+        <attr name="flow_verticalSpacing" format="dimension" />
+        <!-- 最大行数，0 表示不限制 -->
+        <attr name="flow_maxLines" format="integer" />
+        <!-- 行内对齐方式 -->
+        <attr name="flow_gravity" format="enum">
+            <enum name="start" value="8388611" />
+            <enum name="center" value="17" />
+            <enum name="end" value="8388613" />
+        </attr>
+    </declare-styleable>
+</resources>

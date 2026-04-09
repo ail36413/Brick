@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="brick-ui 演示"
+        app:titleTextColor="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="StateLayout"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLoading"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="显示 Loading" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEmpty"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="显示 Empty" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnError"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="显示 Error" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContent"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="显示 Content" />
+
+            <com.ail.brick.ui.statelayout.StateLayout
+                android:id="@+id/stateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:background="#F5F5F5">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="这是内容区域"
+                    android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+            </com.ail.brick.ui.statelayout.StateLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dialog"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConfirm"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="确认对话框" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnInput"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="输入对话框" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnList"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="列表对话框" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBottomList"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="底部列表对话框" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Widget"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLoadingDialog"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LoadingDialog" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BadgeView: "
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                <com.ail.brick.ui.widget.BadgeView
+                    android:id="@+id/badgeView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBadge"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="+1" />
+
+            </LinearLayout>
+
+            <com.ail.brick.ui.widget.RoundLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"
+                app:round_radius="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/design_default_color_primary"
+                    android:gravity="center"
+                    android:text="RoundLayout (16dp)"
+                    android:textColor="@android:color/white" />
+
+            </com.ail.brick.ui.widget.RoundLayout>
+
+            <!-- RoundLayout 描边演示 -->
+            <com.ail.brick.ui.widget.RoundLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                app:round_radius="12dp"
+                app:round_strokeColor="#FF5722"
+                app:round_strokeWidth="2dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="RoundLayout + Stroke"
+                    android:textColor="#FF5722" />
+
+            </com.ail.brick.ui.widget.RoundLayout>
+
+            <!-- FlowLayout 演示（带 maxLines / gravity） -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FlowLayout (maxLines=2, gravity=center)"
+                android:textAppearance="?attr/textAppearanceLabelMedium"
+                android:layout_marginTop="12dp" />
+
+            <com.ail.brick.ui.widget.FlowLayout
+                android:id="@+id/flowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="#F0F0F0"
+                android:padding="8dp"
+                app:flow_maxLines="2"
+                app:flow_gravity="center" />
+
+            <!-- StateLayout 状态回调演示按钮 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStateCallback"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="StateLayout 状态回调演示" />
+
+            <!-- 自定义布局对话框 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCustomDialog"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义布局对话框" />
+
+            <!-- LoadingDialog 可取消 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelableLoading"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="可取消 LoadingDialog" />
+
+            <!-- RecyclerView 演示区域 -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RecyclerView (SimpleAdapter + DividerDecoration)"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDemo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#FAFAFA" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnItemAnim"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="触发 Item 入场动画" />
+
+            <!-- BrickAnim 动画演示 -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BrickAnim 动画"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAnimPulse"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Pulse" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAnimShake"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Shake" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:background="@android:color/darker_gray"
+                android:textColor="@android:color/white"
+                android:fontFamily="monospace"
+                android:textSize="13sp"
+                android:text="操作结果" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

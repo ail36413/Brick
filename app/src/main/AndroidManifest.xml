@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".SampleApp"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BrickSample">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".net.NetDemoActivity" />
+        <activity android:name=".net.WebSocketDemoActivity" />
+        <activity android:name=".utils.UtilsDemoActivity" />
+        <activity android:name=".ui.UiDemoActivity" />
+        <activity android:name=".image.ImageDemoActivity" />
+        <activity android:name=".arch.ArchDemoActivity" />
+        <activity android:name=".store.StoreDemoActivity" />
+        <activity android:name=".log.LogDemoActivity" />
+        <activity android:name=".data.DataDemoActivity" />
+        <activity android:name=".permission.PermissionDemoActivity" />
+        <activity android:name=".startup.StartupDemoActivity" />
+        <activity android:name=".anim.AnimDemoActivity" />
+        <activity android:name=".nav.NavDemoActivity" />
+
+        <service
+            android:name=".net.WebSocketService"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
